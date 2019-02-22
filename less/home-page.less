@@ -1,146 +1,153 @@
 .home {
+	header {
+		border-bottom: 2px dashed @navigation-border;
 
-  header {
-    border-bottom: 2px dashed @navigation-border;
+		img {
+			margin-bottom: 16px;
 
-    img {
-      margin-bottom: 16px;
+			@media @mobile {
+				margin-bottom: 14px;
+			}
+		}
 
-      @media @mobile {
-        margin-bottom: 14px;
+		.header-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			height: 138px;
 
-      }
-    }
+			@media @mobile {
+				height: 185px;
+			}
 
-    .header-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      height: 138px;
+			h2 {
+				// margin: 20px 0;
+			}
 
-      @media @mobile {
-        height: 185px;
-      }
+			p {
+				padding-bottom: 18px;
 
-      h2 {
-        // margin: 20px 0;
-      }
+				@media @mobile {
+					padding-bottom: 16px;
+				}
+			}
+		}
+	}
 
-      p {
-        padding-bottom: 18px;
+	.content-section {
+		margin: 30px 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		// border: 1px solid red;
 
-        @media @mobile {
-          padding-bottom: 16px;
-        }
-      }
-    }
-  }
+		.text-content {
+			width: 48%;
+			padding-right: 1%;
 
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+			@media @mobile {
+				width: 100%;
+			}
+		}
 
+		.img-content {
+			width: 48%;
+			padding-left: 1%;
 
+			@media @mobile {
+				width: 100%;
+				// height: auto;
+				padding: 0;
+				// border: 1px solid red;
+			}
 
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
+			img {
+				border-radius: 10px;
+				@media @mobile {
+					height: 338px;
+					width: auto;
+				}
+			}
+		}
+	}
 
-      @media @mobile {
-        width: 100%;
-      }
-    }
+	.inverse-content {
+		padding-bottom: 30px;
+		border-bottom: 2px dashed @navigation-border;
 
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
+		@media @mobile {
+			display: flex;
+			flex-direction: column-reverse;
+		}
 
-      @media @mobile {
-        width: 100%;
-      }
+		.text-content {
+			padding-left: 1%;
+			padding-right: 0;
 
-      img {
-        border-radius: 10px;
-      }
-    }
-  }
+			@media @mobile {
+				order: 1;
+			}
+		}
 
-  .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+		.img-content {
+			padding-right: 1%;
+			padding-left: 0;
 
-    @media @mobile {
-      display: flex;
-      flex-direction: column-reverse;
-    }
+			img {
+				@media @mobile {
+					height: 335px;
+					width: auto;
+				}
+			}
+		}
+	}
 
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
+	.content-destination {
+		width: 75%;
+		margin: 0 auto 30px;
 
-      @media @mobile {
-        order: 1;
-      }
-    }
+		@media @mobile {
+			width: 100%;
+		}
 
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
+		img {
+			border-radius: 10px;
+		}
+	}
 
-      @media @mobile {
-        order: 0;
-      }
-    }
-  }
+	.content-pick {
+		padding-top: 30px;
+		border-top: 2px dashed @navigation-border;
+		display: flex;
+		justify-content: space-between;
 
-  .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
+		@media @mobile {
+			flex-wrap: wrap;
+			align-items: space-evenly;
+			justify-content: center;
+			// border: 1px solid red;
+		}
 
-    @media @mobile {
-      width: 100%;
-    }
+		.destination {
+			width: 30%;
+			margin-bottom: 30px;
 
-    img {
-      border-radius: 10px;
-    }
-  }
+			@media @mobile {
+				width: 85%;
+				margin-left: 22px;
+				// border: 1px solid red;
+			}
 
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+			//.button (width|height|border-radius|font-size)
+			.btn {
+				.button(83%, 43px, 15px, 1.8rem);
 
-    @media @mobile {
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      // border: 1px solid red;
-    }
-
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
-
-      @media @mobile {
-        width: 85%;
-        margin-left: 22px;
-        // border: 1px solid red;
-      }
-
-      //.button (width|height|border-radius|font-size)
-      .btn {
-        .button(83%, 43px, 15px, 1.8rem);
-
-        @media @mobile {
-          .button(94%, 43px, 15px, 1.8rem);
-        }
-      }
-    }
-  }
+				@media @mobile {
+					.button(94%, 43px, 15px, 1.8rem);
+				}
+			}
+		}
+	}
 }
 
 // home
