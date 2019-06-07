@@ -2,7 +2,26 @@
 	header {
 		border-bottom: 2px dashed @navigation-border;
 
-		img {
+		.header-pic {
+			position: absolute;
+			overflow: hidden;
+			width: 800px;
+			height: 240px;
+			// border: 1px solid red;
+
+			.bus {
+				position: relative;
+				transform: translate(300px, -25px);
+				transition: transform 3s;
+			}
+
+			.bus:hover {
+				transform: translate(800px, -25px);
+			}
+		}
+
+		.sand {
+			// position: absolute;
 			margin-bottom: 16px;
 
 			@media @mobile {
@@ -15,6 +34,7 @@
 			flex-direction: column;
 			justify-content: space-around;
 			height: 138px;
+			// border: 1px solid red;
 
 			@media @mobile {
 				height: 185px;
