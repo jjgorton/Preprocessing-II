@@ -233,11 +233,25 @@ nav .nav-container .nav-links a {
 .home header {
   border-bottom: 2px dashed #C0C0C0;
 }
-.home header img {
+.home header .header-pic {
+  position: absolute;
+  overflow: hidden;
+  width: 800px;
+  height: 240px;
+}
+.home header .header-pic .bus {
+  position: relative;
+  transform: translate(300px, -25px);
+  transition: transform 3s;
+}
+.home header .header-pic .bus:hover {
+  transform: translate(800px, -25px);
+}
+.home header .sand {
   margin-bottom: 16px;
 }
 @media (max-width: 550px) {
-  .home header img {
+  .home header .sand {
     margin-bottom: 14px;
   }
 }
